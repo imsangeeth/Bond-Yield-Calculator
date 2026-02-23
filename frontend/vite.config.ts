@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/bond': {
-        target: 'bond-yield-calculator-production-5d73.up.railway.app',
+        target: 'https://bond-yield-calculator-production-5d73.up.railway.app',
         changeOrigin: true
       }
     }
