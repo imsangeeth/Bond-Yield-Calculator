@@ -6,6 +6,12 @@ import { BondModule } from './bond/bond.module';
 async function bootstrap() {
   const app = await NestFactory.create(BondModule, { logger: ['error', 'warn', 'log'] });
 
+  app.enableCors({
+    origin: 'https://bond-yield-calculator-production-5d73.up.railway.app', 
+    methods: 'GET,POST',
+    credentials: true,
+  });
+
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
