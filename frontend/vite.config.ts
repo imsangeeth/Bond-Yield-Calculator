@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react-swc';
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 5173,
+    port: 8080,
     proxy: {
       '/bond': {
         target: 'https://bond-yield-calculator-production-5d73.up.railway.app',
